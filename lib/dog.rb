@@ -20,7 +20,7 @@ class Dog
   end
   
   def self.save 
-    sql = "INSERT INTO songs VALUES ("
+    sql = "INSERT INTO dogs (name, breed) VALUES (?, ?)
   end
   
   def self.drop_table
