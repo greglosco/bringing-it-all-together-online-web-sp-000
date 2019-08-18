@@ -20,7 +20,9 @@ class Dog
   end
   
   def self.save 
-    sql = "INSERT INTO dogs (name, breed) VALUES (?, ?)
+    sql = "INSERT INTO dogs (name, breed) VALUES (?, ?)"
+    
+    DB[:conn].execute(sql)
   end
   
   def self.drop_table
