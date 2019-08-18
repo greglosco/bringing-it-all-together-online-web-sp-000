@@ -23,6 +23,8 @@ class Dog
     sql = "INSERT INTO dogs (name, breed) VALUES (?, ?)"
     
     DB[:conn].execute(sql, self.name, self.breed)
+    
+    @id = 
   end
   
   def self.drop_table
