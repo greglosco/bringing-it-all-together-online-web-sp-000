@@ -20,7 +20,7 @@ class Dog
   end
   
   def self.save 
-    
+    sql = ""
   end
   
   def self.drop_table
