@@ -32,6 +32,10 @@ class Dog
    self 
   end
   
+  def self.create 
+    
+  end
+  
   def update 
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
     
