@@ -24,7 +24,7 @@ class Dog
     
     DB[:conn].execute(sql, self.name, self.breed)
     
-    @id = DB[:conn].execute(sql)
+    @id = DB[:conn].execute("SELECT last_row_entered")
   end
   
   def self.drop_table
