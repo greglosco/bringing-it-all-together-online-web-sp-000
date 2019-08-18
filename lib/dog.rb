@@ -24,7 +24,7 @@ class Dog
     
     DB[:conn].execute(sql, self.name, self.breed)
     
-    @id = 
+    @id = DB[:conn].execute(sql)
   end
   
   def self.drop_table
