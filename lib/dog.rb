@@ -31,7 +31,7 @@ class Dog
   end
   
   def update 
-    sql = "SELECT * FROM dogs "
+    sql = "UPDATE dogs "
   end
   
   end
