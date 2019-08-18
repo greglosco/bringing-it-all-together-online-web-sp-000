@@ -2,7 +2,7 @@ class Dog
   
   attr_accessor :name, :breed, :id
   
-  def initialize(name:, breed:, id: nil)
+  def initialize(id: nil, name:, breed:)
     @id = id
     @name = name
     @breed = breed 
@@ -56,7 +56,7 @@ class Dog
     id = row[0]
     name = row[1]
     breed = row[2]
-    self.new(name: name, breed: breed, id: id)
+    self.new(id: id, name: name, breed: breed)
   end
   
   def self.find_by_name(name)
@@ -86,7 +86,7 @@ class Dog
     
     if !dog.empty?
       dog_data = dog[0]
-      dog = Dog.new(dog_data[1])
+      dog = Dog.new(dog_data[0], dog_data[1], dog_data[2])
   end
   
 end
